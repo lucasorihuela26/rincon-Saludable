@@ -108,6 +108,7 @@ nav{
     z-index:1000;
     box-shadow:0 3px 12px rgba(0,0,0,.35);
 }
+
 /* ========================================= */
 /* BENEFICIOS */
 /* ========================================= */
@@ -115,23 +116,20 @@ nav{
 .beneficios{
     width:100%;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:stretch;
-    background:#2e7d32;
-    padding:25px 40px;
     gap:20px;
+    padding:30px;
+    background:#2e7d32;
 }
 
 .beneficio{
     flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
     background:white;
     border-radius:15px;
     padding:25px;
     text-align:center;
-    box-shadow:0 2px 15px rgba(0,0,0,.2);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
     transition:.3s;
 }
 
@@ -141,13 +139,11 @@ nav{
 
 .beneficio h3{
     color:#2e7d32;
-    font-size:24px;
     margin-bottom:10px;
 }
 
 .beneficio p{
     color:#555;
-    font-size:16px;
     line-height:1.5;
 }
 
@@ -1027,4 +1023,19 @@ footer hr{
 
     background:#e53935;
     color:white;
+}
+/* ================= BENEFICIOS ================= */
+
+.beneficios{
+
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:20px;
+}
+
+.beneficio{
+
+    width:100%;
+    max-width:400px;
 }
