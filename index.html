@@ -7,8 +7,44 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <nav>
+
+        <!-- BOTÓN MENÚ CELULAR -->
+
+        <button class="menu-toggle" onclick="mostrarMenu()">
+            ☰
+        </button>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            <img src="imagenes/icono-rinconsaludable.png" alt="Rincón Saludable">
+        </div>
+
+        <!-- MENÚ -->
+
+        <div class="menu-links" id="menu">
+            <a href="#aceites">Aceites</a>
+            <a href="#yuyos">Yuyos</a>
+            <a href="#mieles">Mieles</a>
+            <a href="#frutos">Frutos Secos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        
+        <!-- CARRITO -->
+
+        <div class="carrito-nav">
+            🛒
+            <span id="cantidad">0</span>
+        </div>
+    </nav>
+
+<!-- ====================================================== -->
+<!-- PORTADA -->
+<!-- ====================================================== -->
 
 <section class="portada">
+
     <div class="overlay">
 
         <h2>🌿 Rincón Saludable 🌿</h2>
@@ -18,87 +54,132 @@
         <a href="#destacados" class="btn-destacados">
             🔥 Ver Productos Destacados
         </a>
-
     </div>
+
 </section>
 
-<nav>
+<!-- ====================================================== -->
+<!-- BENEFICIOS -->
+<!-- ====================================================== -->
 
-    <div class="logo">
-    <img src="imagenes/icono-rinconsaludable.png" alt="Rincón Saludable">
-</div>
+<section class="beneficios">
 
-    <div class="menu-links">
-        <a href="#aceites">Aceites</a>
-        <a href="#yuyos">Yuyos</a>
-        <a href="#mieles">Mieles</a>
-        <a href="#frutos">Frutos Secos</a>
-        <a href="#contacto">Contacto</a>
+    <div class="beneficio">
+        <h3>🚚 Envíos</h3>
+        <p>Realizamos envíos en CABA y GBA.</p>
     </div>
 
-    <div class="carrito-nav">
-        🛒 <span id="cantidad">0</span>
+    <div class="beneficio">
+        <h3>🌿 Calidad</h3>
+        <p>Productos naturales seleccionados.</p>
     </div>
 
-</nav>
+    <div class="beneficio">
+        <h3>💳 Pagos</h3>
+        <p>Efectivo, débito, crédito y transferencias.</p>
+    </div>
 
-    <section class="bienvenida">
+    <div class="beneficio">
+        <h3>⭐ Atención</h3>
+        <p>Asesoramiento personalizado.</p>
+    </div>
 
-    <p>
-        Nos alegra recibirte en nuestro espacio dedicado al bienestar y la alimentación natural.
-        En Rincón Saludable encontrarás una amplia variedad de productos seleccionados para acompañarte
-        en un estilo de vida más saludable, equilibrado y consciente.
-    </p>
+</section>
 
-    <p>
-        Te ofrecemos aceites naturales, mieles artesanales, frutos secos, hierbas e infusiones,
-        flor de Jamaica y muchos otros productos de calidad para cuidar tu salud y disfrutar
-        de sabores auténticos.
-    </p>
+<!-- ====================================================== -->
+<!-- PRODUCTOS DESTACADOS -->
+<!-- ====================================================== -->
 
-    <p>
-        Explorá nuestro catálogo, descubrí nuevas opciones para tu alimentación y no dudes en contactarnos
-        si necesitás asesoramiento o información sobre nuestros productos.
-    </p>
-
-    <h3>💚 Tu bienestar comienza con pequeñas elecciones saludables 💚</h3>
-    </section>
-
-    <section id="destacados" class="destacados">    
+<section id="destacados" class="destacados">
 
     <h2>🔥 Productos Destacados</h2>
 
     <div class="contenedor-destacados">
 
+        <!-- PRODUCTO 1 -->
+
         <div class="destacado">
-            <span class="etiqueta">OFERTA</span>
+
+            <span class="etiqueta">20%</span>
+
             <img src="imagenes/aceite-oliva.jpg.png" alt="Aceite de Oliva">
-            <h3>Aceite de Oliva</h3>
-            <p class="precio-viejo">$8.500</p>
-            <p class="precio">$6.800</p>
-            <button onclick="agregarCarrito()">Agregar al carrito</button>
+
+            <div class="info-producto">
+
+                <h3>Aceite de Oliva Extra Virgen</h3>
+
+                <p class="stock">✅ Stock disponible</p>
+                <p class="precio-viejo">$10.500</p>
+                <p class="precio">$8.900</p>
+                
+                <button onclick="agregarCarrito(
+                'Aceite de Oliva',
+                8900,
+                'imagenes/aceite-oliva.jpg.png'
+                )">
+                🛒 Agregar al carrito
+                </button>
+            </div>
         </div>
+
+        <!-- PRODUCTO 2 -->
 
         <div class="destacado">
-            <span class="etiqueta">OFERTA</span>
-            <img src="imagenes/miel-multifloral.jpg.png" alt="Miel Multifloral">
-            <h3>Miel Multifloral</h3>
-            <p class="precio-viejo">$4.500</p>
-            <p class="precio">$3.500</p>
-            <button onclick="agregarCarrito()">Agregar al carrito</button>
+
+            <span class="etiqueta">-20%</span>
+
+            <img src="imagenes/miel-multifloral.jpg.png" alt="Miel">
+
+            <div class="info-producto">
+
+                <h3>Miel Multifloral</h3>
+
+                <p class="stock">✅ Stock disponible</p>
+                <p class="precio-viejo">$6.200</p>
+                <p class="precio">$4.950</p>
+
+                <button onclick="agregarCarrito(
+            'Miel Multifloral',
+            4950,
+            'imagenes/miel-multifloral.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
+            </div>
         </div>
+
+        <!-- PRODUCTO 3 -->
 
         <div class="destacado">
-            <span class="etiqueta">OFERTA</span>
-            <img src="imagenes/almendras.jpg.png" alt="Almendras Enteras">
-            <h3>Almendras Enteras</h3>
-            <p class="precio-viejo">$6.000</p>
-            <p class="precio">$5.100</p>
-            <button onclick="agregarCarrito()">Agregar al carrito</button>
-        </div>
 
+            <span class="etiqueta">15%</span>
+
+            <img src="imagenes/almendras.jpg.png" alt="Almendras">
+
+            <div class="info-producto">
+
+                <h3>Almendras Enteras</h3>
+
+                <p class="stock">✅ Stock disponible</p>
+                <p class="precio-viejo">$8.400</p>
+                <p class="precio">$6.990</p>
+
+                <button onclick="agregarCarrito(
+            'Almendras Enteras',
+            6990,
+            'imagenes/almendras.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
+            </div>
+        </div>
     </div>
 
+</section>
+
+<!-- ====================================================== -->
+<!-- CATEGORÍAS -->
+<!-- ====================================================== -->
 </section>
 
     <section id="aceites">
@@ -110,21 +191,39 @@
                 <img src="imagenes/aceite-oliva.jpg.png" alt="">
                 <h3>Aceite de Oliva</h3>
                 <p>$8.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Aceite de Oliva',
+            8500,
+            'imagenes/aceite-oliva.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/aceite-coco.jpg.png" alt="">
                 <h3>Aceite de Coco</h3>
                 <p>$7.200</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Aceite de Coco',
+            7200,
+            'imagenes/aceite-coco.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/aceite-girasol.jpg.png" alt="">
                 <h3>Aceite de Girasol</h3>
                 <p>$5.800</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Aceite de Girasol',
+            5800,
+            'imagenes/aceite-girasol.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
         </div>
@@ -139,28 +238,52 @@
                 <img src="imagenes/manzanilla.jpg.png" alt="">
                 <h3>Manzanilla</h3>
                 <p>$2.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Manzanilla',
+            2500,
+            'imagenes/manzanilla.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/peperina.jpg.jpg" alt="">
                 <h3>Peperina</h3>
                 <p>$2.700</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Peperina',
+            2700,
+            'imagenes/peperina.jpg.jpg'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/tilo.jpg.jpg" alt="">
                 <h3>Tilo</h3>
                 <p>$2.600</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Tilo',
+            2600,
+            'imagenes/tilo.jpg.jpg'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/flor-jamaica.jpg.jpg" alt="">
                 <h3>Flor de Jamaica</h3>
                 <p>$3.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Flor de Jamaica',
+            3500,
+            'imagenes/flor-jamaica.jpg.jpg'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
         </div>
@@ -175,21 +298,39 @@
                 <img src="imagenes/miel-multifloral.jpg.png" alt="">
                 <h3>Miel Multifloral</h3>
                 <p>$4.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Miel Multifloral',
+            4500,
+            'imagenes/miel-multifloral.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/miel-eucalipto.jpg.png" alt="">
                 <h3>Miel con Eucalipto</h3>
                 <p>$4.900</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Miel con Eucalipto',
+            4900,
+            'imagenes/miel-eucalipto.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
             
             <div class="card">
                 <img src="imagenes/Miel-de-carpincho.png" alt="">
                 <h3>Miel de Carpincho</h3>
                 <p>$5.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Miel de Carpincho',
+            5500,
+            'imagenes/Miel-de-carpincho.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
         </div>
@@ -204,34 +345,122 @@
                 <img src="imagenes/almendras.jpg.png" alt="">
                 <h3>Almendras Enteras</h3>
                 <p>$6.000</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Almendras Enteras',
+            6000,
+            'imagenes/almendras.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/nueces.jpg.png" alt="">
                 <h3>Nueces</h3>
                 <p>$6.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Nueces',
+            6500,
+            'imagenes/nueces.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
             <div class="card">
                 <img src="imagenes/pasas.jpg.png" alt="">
                 <h3>Pasas de Uva</h3>
                 <p>$3.200</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Pasas de Uva',
+            3200,
+            'imagenes/pasas.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
             
             <div class="card">
                 <img src="imagenes/mani.jpg.png" alt="">
                 <h3>Mani Tostado</h3>
                 <p>$3.500</p>
-                <button onclick="agregarCarrito()">Agregar al carrito</button>
+                <button onclick="agregarCarrito(
+            'Mani Tostado',
+            3500,
+            'imagenes/mani.jpg.png'
+            )">
+            🛒 Agregar al carrito
+            </button>
             </div>
 
         </div>
     </section>
 
-    <section id="contacto" class="formulario">
+<!-- ====================================================== -->
+<!-- CARRITO LATERAL -->
+<!-- ====================================================== -->
+
+<aside id="carrito" class="carrito-lateral">
+
+    <div class="carrito-header">
+
+        <h2>🛒 Mi carrito</h2>
+
+        <button onclick="cerrarCarrito()">
+            ✖
+        </button>
+
+    </div>
+
+    <div id="productosCarrito" class="productos-carrito">
+
+        <p class="carrito-vacio">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+    <div class="carrito-footer">
+
+        <h3>
+            Total:
+            <span id="totalCarrito">$0</span>
+        </h3>
+
+       <button class="btn-comprar" onclick="enviarWhatsApp()">
+        📲 Finalizar compra por WhatsApp
+        </button>
+
+    </div>
+
+</aside>
+
+<!-- ====================================================== -->
+<!-- BOTÓN WHATSAPP -->
+<!-- ====================================================== -->
+
+<a
+    href="https://wa.me/5491127607229"
+    class="btn-whatsapp"
+    target="_blank">
+
+    <img src="imagenes/icono-whastapp.png" alt="WhatsApp">
+
+</a>
+
+<!-- ====================================================== -->
+<!-- BOTÓN VOLVER ARRIBA -->
+<!-- ====================================================== -->
+
+<button
+    id="btnArriba"
+    class="btn-arriba"
+    onclick="volverArriba()">
+
+    ↑
+
+</button>
+  <section id="contacto" class="formulario">
 
         <h2>📩 Contactanos</h2>
 
@@ -258,7 +487,7 @@
 
             <h3>📍 Contacto</h3>
 
-            <p>📞 +54 11 1234-5678</p>
+            <p>📞 +54 11 2760-7229</p>
 
             <p>📧 rinconsaludable@gmail.com</p>
 
@@ -302,15 +531,244 @@
 
 </footer>
 
-    <script>
-        let cantidad = 0;
+<script>
 
-        function agregarCarrito() {
-            cantidad++;
-            document.getElementById("cantidad").innerText = cantidad;
-        }
-    </script>
+/*=========================================
+MENU HAMBURGUESA
+=========================================*/
 
-</body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</html>
+function mostrarMenu(){
+
+    document
+    .getElementById("menu")
+    .classList.toggle("mostrar");
+
+}
+
+/*=========================================
+CARRITO
+=========================================*/
+
+let carrito = [];
+let total = 0;
+
+function agregarCarrito(nombre, precio, imagen){
+
+    let producto = carrito.find(p => p.nombre === nombre);
+
+    if(producto){
+
+        producto.cantidad++;
+    
+    }else{
+    
+        carrito.push({
+            nombre:nombre,
+            precio:precio,
+            imagen:imagen,
+            cantidad:1
+        });
+    }
+    actualizarCarrito();
+}
+/*=========================================
+ACTUALIZAR CARRITO
+=========================================*/
+function actualizarCarrito(){
+
+    let contenedor =
+    document.getElementById("productosCarrito");
+
+    contenedor.innerHTML="";
+    total=0;
+    let cantidadProductos=0;
+
+    carrito.forEach((producto,index)=>{
+
+        let subtotal =
+        producto.precio * producto.cantidad;
+
+        total += subtotal;
+        cantidadProductos += producto.cantidad;
+        contenedor.innerHTML += `
+
+        <div class="producto-carrito">
+
+            <img src="${producto.imagen}" class="img-carrito">
+
+            <div class="info-carrito">
+
+                <h4>${producto.nombre}</h4>
+
+                <p>$${producto.precio}</p>
+
+                <div class="cantidad">
+
+                    <button onclick="restarCantidad(${index})">
+                        ➖
+                    </button>
+
+                    <span>${producto.cantidad}</span>
+
+                    <button onclick="sumarCantidad(${index})">
+                        ➕
+                    </button>
+
+                </div>
+                <p class="subtotal">
+                    Subtotal: $${subtotal}
+                </p>
+
+            </div>
+            
+            <button
+            class="btn-eliminar"
+            onclick="eliminarProducto(${index})">
+                🗑️
+            </button>
+        </div>
+        `;
+    });
+
+    document.getElementById("cantidad").innerText =
+    cantidadProductos;
+
+    document.getElementById("totalCarrito").innerText =
+    "$"+total;
+}
+function sumarCantidad(indice){
+
+    carrito[indice].cantidad++;
+
+    actualizarCarrito();
+
+}
+
+function restarCantidad(indice){
+
+    if(carrito[indice].cantidad>1){
+
+        carrito[indice].cantidad--;
+
+    }else{
+        carrito.splice(indice,1);
+    }
+    actualizarCarrito();
+}
+
+function eliminarProducto(indice){
+
+    carrito.splice(indice,1);
+    actualizarCarrito();
+}
+/*=========================================
+ABRIR CARRITO
+=========================================*/
+
+function abrirCarrito(){
+
+    document
+    .getElementById("carrito")
+    .classList.add("mostrar-carrito");
+
+}
+
+function cerrarCarrito(){
+
+    document
+    .getElementById("carrito")
+    .classList.remove("mostrar-carrito");
+
+}
+
+document
+.querySelector(".carrito-nav")
+.addEventListener("click",abrirCarrito);
+
+/*=========================================
+FAVORITOS
+=========================================*/
+
+let favoritos =
+document.querySelectorAll(".favorito");
+
+favoritos.forEach(boton=>{
+    boton.addEventListener("click",function(){
+        this.classList.toggle("activo");
+    });
+});
+
+/*=========================================
+BOTON ARRIBA
+=========================================*/
+
+function volverArriba(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+window.addEventListener("scroll",()=>{
+
+    let boton =
+    document.getElementById("btnArriba");
+
+    if(window.scrollY>400){
+        boton.style.display="flex";
+    }else{
+        boton.style.display="none";
+    }
+});
+
+/*=========================================
+ENVIAR WHATSAPP
+=========================================*/
+function enviarWhatsApp(){
+
+    if(carrito.length===0){
+
+        alert("Tu carrito está vacío.");
+
+        return;
+
+    }
+
+    let mensaje="¡Hola! Quiero realizar el siguiente pedido:%0A%0A";
+
+    carrito.forEach(producto=>{
+
+        mensaje +=
+        producto.nombre+
+        "%0A";
+
+        mensaje +=
+        "Cantidad: "+producto.cantidad+
+        "%0A";
+
+        mensaje +=
+        "Precio: $"+producto.precio+
+        "%0A";
+
+        mensaje +=
+        "Subtotal: $"+
+        (producto.precio*producto.cantidad)+
+        "%0A%0A";
+
+    });
+
+    mensaje +=
+    "💰 *TOTAL: $"+total+"*"
+    "Gracias por comprar en 🌿 Rincón Saludable.";
+
+    let telefono="5491127607229";
+
+    window.open(
+        "https://wa.me/"+telefono+"?text="+mensaje,
+        "_blank"
+    );
+
+}
+</script>
+</body> 
